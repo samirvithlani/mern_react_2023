@@ -46,3 +46,28 @@ communication bw compoants
 
 2)context api
 3)redux
+
+
+today topic: 27-11-2023
+
+install extension: ES7 React/Redux/GraphQL/React-Native snippets
+create folder name compoants
+create file Home.js and write rafc and enter
+create file Heade.jsx and write rfc and enter
+create file Footer.jsx and write rfc and enter
+
+implment external css in Home.js --> layout.css
+implment internal css in Header .jsx [check code]
+implment inline css in Footer.jsx [check code]
+
+introduction of props:
+
+pass data from app.js to Home.js
+  get data in props object
+pass data from Home.js to Header.jsx
+  get data with sperate objects without props
+
+
+create an array of users and iterate using map function
+pass users array from app.js to Home.js
+  get data in props object
