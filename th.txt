@@ -1,0 +1,48 @@
+
+{/* <h1>HELLO ALL....</h1>
+      {name}
+      <h1>Name = {name}</h1>
+      <h1>Runs = {runs}</h1>
+      <h1>isMarried = {isMarried == true ? "YES" : "NO"}</h1>
+      <h1>ODI score = {score.odi}</h1>
+      <h1>Test score = {score.test}</h1>
+      <h1>Age = {age}</h1> */}
+      var name ="Kohli"
+  var runs = 10000
+  var isMarried = true
+  var age = 30
+  //json...
+  var score={
+    test:21,
+    odi:50,
+
+  }
+
+
+
+MVC: MODEL VIEW CONTROLLER
+MICROSERVICES:
+
+MODULE BASED ARCH:
+component based arch: [ecom:] 
+[product,[addProduct],[list],[edit],[delete]]
+[cart]
+[payment]
+
+:recat compoant: 
+1)class based component
+    after 16.0.0 --> 18.x
+2)functional component: hooks --> life cycle
+
+
+//2types of function 
+1)function declaration
+2)arrow function
+
+communication bw compoants
+
+1)props : props object
+    inheritacne --> parent to child
+
+2)context api
+3)redux

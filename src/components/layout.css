@@ -1,0 +1,12 @@
+.content{
+    margin-top: 5rem;
+    height: 400px;
+    width: 100%;
+    background-color: cornsilk;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: auto;
+    text-align: center;
+
+}

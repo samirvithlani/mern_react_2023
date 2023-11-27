@@ -1,29 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
 
+import { Home } from "./components/Home";
+import Header from "./components/Header";
+import { Footer } from "./components/Footer";
 function App() {
-
-  var name ="Kohli"
-  var runs = 10000
-  var isMarried = true
-  var age = 30
-  //json...
-  var score={
-    test:21,
-    odi:50,
-
+  var title = "INDIA";
+  var indepndence = "15th August 1947";
+  var freedomFighters ={
+    "Mg": "Father of the Nation",
+    "Bs": "Shaheed",
   }
+  const users =[
+    {
+      id:1,
+      name:"Raj",
+    },
+    {
+      id:2,
+      name:"Ravi",
+    }
+  ]
 
   return (
-    <div className='App'>
-      <h1>HELLO ALL....</h1>
-      {name}
-      <h1>Name = {name}</h1>
-      <h1>Runs = {runs}</h1>
-      <h1>isMarried = {isMarried == true ? "YES" : "NO"}</h1>
-      <h1>ODI score = {score.odi}</h1>
-      <h1>Test score = {score.test}</h1>
-      <h1>Age = {age}</h1>
+    <div className="App">
+      <Header title={title} ind={indepndence} ff = {freedomFighters}></Header>
+      <Home t={title} ind = {indepndence} ff ={freedomFighters} users = {users}></Home>
+      <Footer />
     </div>
   );
 }
