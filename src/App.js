@@ -1,8 +1,10 @@
 import logo from "./logo.svg";
-
 import { Home } from "./components/Home";
 import Header from "./components/Header";
 import { Footer } from "./components/Footer";
+import { Users } from "./components/users/Users";
+import "./App.css";
+
 function App() {
   var title = "INDIA";
   var indepndence = "15th August 1947";
@@ -24,8 +26,9 @@ function App() {
   return (
     <div className="App">
       <Header title={title} ind={indepndence} ff = {freedomFighters}></Header>
-      <Home t={title} ind = {indepndence} ff ={freedomFighters} users = {users}></Home>
-      <Footer />
+      {/* <Home t={title} ind = {indepndence} ff ={freedomFighters} users = {users}></Home> */}
+      <Users title = {title}/>
+      {/* <Footer /> */}
     </div>
   );
 }

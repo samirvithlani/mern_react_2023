@@ -71,3 +71,54 @@ pass data from Home.js to Header.jsx
 create an array of users and iterate using map function
 pass users array from app.js to Home.js
   get data in props object
+
+
+https://getbootstrap.com/docs/4.1/getting-started/introduction/
+
+
+props drilling:
+
+//map will return all records
+//filter will return only satisfied records
+
+
+:virtual dom in react js: 
+//dom --> document object model 
+
+clone of real dom : -->virtual dom 
+
+
+hooks --> life cycle / built in methods
+
+useState -->state management
+
+{
+  id,name ,email
+  set
+
+}
+
+//users ---> user array -->
+//usersList ---> props array
+//usersList table using map users iteration
+
+//creaet test function Users [parent] 
+//create test function User [child] --> call props.test
+
+//create Datele function users --> id -->
+//delete call --> usersList [ child] ==> props.deleetuser(id)
+//filter --> update users...--> but it will not update in real time
+
+
+//useState --> hooks --> life cycle / built in methods
+count var --> setCount --> 0
+
+count increment -->function updateCount value --> setCount(value) --> evenetully it will update in real time
+//filter --> update users...--> but it will not update in real time
+
+users array useSate -->  inital data --> 3 obejcts...
+
+deleteFuction ()filter --.
+filter record setUsers --> setUsers(newUsers) --> evenetully it will update in real time
+
+
