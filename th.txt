@@ -98,6 +98,10 @@ useState -->state management
 
 }
 
+create folder user -->
+component Users.jsx
+component UsersList.jsx
+
 //users ---> user array -->
 //usersList ---> props array
 //usersList table using map users iteration
