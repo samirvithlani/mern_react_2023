@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title={title} ind={indepndence} ff = {freedomFighters}></Header>
+      {/* <Header title={title} ind={indepndence} ff = {freedomFighters}></Header> */}
       {/* <Home t={title} ind = {indepndence} ff ={freedomFighters} users = {users}></Home> */}
       <Users title = {title}/>
       {/* <Footer /> */}

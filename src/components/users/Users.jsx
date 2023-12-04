@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { UserReg } from "./UserReg";
 import { UsersList } from "./UsersList";
 
 export const Users = (props) => {
@@ -75,27 +76,43 @@ export const Users = (props) => {
 
     console.log("after delete...users", users);
     //useState update...
-    setusers(users)
+    setusers(users);
+  };
+
+  const addUser = (user) => {
+    console.log("add user", user);
+    //push...
+    // users = users.push(user);
+    // setusers(users);
+    //spread operator
+
+    users = [...users,user]
+    console.log("after add...users", users);
+    setusers(users);
   };
 
   return (
     <div>
-      <h1>Count -- {count}</h1>
+      {/* <h1>Count -- {count}</h1>
       <button
         onClick={() => {
           increment();
         }}
       >
         Increment
-      </button>
-      <h1>USERS -- {props.title}</h1>
+      </button> */}
+      {/* <h1>USERS -- {props.title}</h1> */}
       {/* <button onClick={()=>{test()}}>Test</button> */}
-      <UsersList
+      <UserReg addUser={addUser}></UserReg>
+      <br></br>
+      <br></br>
+      <br></br>
+      {/* <UsersList
         users={users}
         title={props.title}
         test={test}
         deleteUser={deleteUser}
-      />
+      /> */}
     </div>
   );
 };

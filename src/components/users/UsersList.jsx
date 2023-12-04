@@ -4,6 +4,9 @@ export const UsersList = (props) => {
   return (
     <div>
       <h1>USERS LIST </h1>
+      {
+        props.users?.length === 0 ? <h2>No Users Found</h2> : null
+      }
       <table className="table">
         <thead>
           <tr>
