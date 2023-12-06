@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { Users } from "./components/users/Users";
 import "./App.css";
 import { AddEmployee } from "./components/employee/AddEmployee";
+import { AddEmployee1 } from "./components/employee/AddEmployee1";
 
 function App() {
   var title = "INDIA";
@@ -29,7 +30,7 @@ function App() {
       {/* <Header title={title} ind={indepndence} ff = {freedomFighters}></Header> */}
       {/* <Home t={title} ind = {indepndence} ff ={freedomFighters} users = {users}></Home> */}
       {/* <Users title = {title}/> */}
-      <AddEmployee/>
+      <AddEmployee1/>
       {/* <Footer /> */}
     </div>
   );
