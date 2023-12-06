@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Users } from "./components/users/Users";
 import "./App.css";
+import { AddEmployee } from "./components/employee/AddEmployee";
 
 function App() {
   var title = "INDIA";
@@ -27,7 +28,8 @@ function App() {
     <div className="App">
       {/* <Header title={title} ind={indepndence} ff = {freedomFighters}></Header> */}
       {/* <Home t={title} ind = {indepndence} ff ={freedomFighters} users = {users}></Home> */}
-      <Users title = {title}/>
+      {/* <Users title = {title}/> */}
+      <AddEmployee/>
       {/* <Footer /> */}
     </div>
   );
