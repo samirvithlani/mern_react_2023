@@ -126,3 +126,16 @@ deleteFuction ()filter --.
 filter record setUsers --> setUsers(newUsers) --> evenetully it will update in real time
 
 
+
+REACT ROUTING..
+
+SPA --> single page application
+REACT ROUTER DOM ---> v. 6
+
+<BrowserRouter>
+  <Routes>
+  <Route></Route>
+  <Route></Route>
+  <Route></Route>
+  </Routes>
+  </BrowserRouter>

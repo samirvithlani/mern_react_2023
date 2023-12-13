@@ -7,24 +7,30 @@ import "./App.css";
 import { AddEmployee } from "./components/employee/AddEmployee";
 import { AddEmployee1 } from "./components/employee/AddEmployee1";
 import { RegisterEmployee } from "./components/employee/RegisterEmployee";
+import { Navbar } from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import { NetflixHome } from "./components/Netflix/NetflixHome";
+import { NetflixMovis } from "./components/Netflix/NetflixMovis";
+import { ThrillerMovies } from "./components/Netflix/ThrillerMovies";
+import { ComedyMovies } from "./components/Netflix/ComedyMovies";
 
 function App() {
   var title = "INDIA";
   var indepndence = "15th August 1947";
-  var freedomFighters ={
-    "Mg": "Father of the Nation",
-    "Bs": "Shaheed",
-  }
-  const users =[
+  var freedomFighters = {
+    Mg: "Father of the Nation",
+    Bs: "Shaheed",
+  };
+  const users = [
     {
-      id:1,
-      name:"Raj",
+      id: 1,
+      name: "Raj",
     },
     {
-      id:2,
-      name:"Ravi",
-    }
-  ]
+      id: 2,
+      name: "Ravi",
+    },
+  ];
 
   return (
     <div className="App">
@@ -33,7 +39,17 @@ function App() {
       {/* <Users title = {title}/> */}
       {/* <AddEmployee1/> */}
       {/* <Footer /> */}
-      <RegisterEmployee/>
+      {/* <RegisterEmployee/> */}
+
+      <Navbar />
+
+      <Routes>
+        <Route path="/netflixhome" element={<NetflixHome />}></Route>
+        <Route path="/netflixmovies" element={<NetflixMovis/>}></Route>
+        <Route path="/thrillermovies" element ={<ThrillerMovies/>}></Route>
+        <Route path ="/netflixmovies/comedy" element ={<ComedyMovies/>}></Route>
+      </Routes>
+      
     </div>
   );
 }
