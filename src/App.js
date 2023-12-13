@@ -6,6 +6,7 @@ import { Users } from "./components/users/Users";
 import "./App.css";
 import { AddEmployee } from "./components/employee/AddEmployee";
 import { AddEmployee1 } from "./components/employee/AddEmployee1";
+import { RegisterEmployee } from "./components/employee/RegisterEmployee";
 
 function App() {
   var title = "INDIA";
@@ -30,8 +31,9 @@ function App() {
       {/* <Header title={title} ind={indepndence} ff = {freedomFighters}></Header> */}
       {/* <Home t={title} ind = {indepndence} ff ={freedomFighters} users = {users}></Home> */}
       {/* <Users title = {title}/> */}
-      <AddEmployee1/>
+      {/* <AddEmployee1/> */}
       {/* <Footer /> */}
+      <RegisterEmployee/>
     </div>
   );
 }
