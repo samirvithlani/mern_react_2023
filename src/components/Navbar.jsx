@@ -25,16 +25,21 @@ export const Navbar = () => {
             <a class="nav-link" href="/netflixhome">
               Home <span class="sr-only">(current)</span>
             </a>
-            </li>
-            <li class="nav-item">
+          </li>
+          <li class="nav-item">
             <Link class="nav-link" to="/netflixhome">
               Home <span class="sr-only">(current)</span>
             </Link>
-            </li>
-          
+          </li>
+
           <li class="nav-item">
             <Link class="nav-link" to="/netflixmovies">
               MOVIES
+            </Link>
+          </li>
+          <li class="nav-item">
+            <Link class="nav-link" to="/series">
+              SERIES
             </Link>
           </li>
         </ul>
