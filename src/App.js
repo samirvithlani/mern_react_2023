@@ -16,6 +16,9 @@ import { ComedyMovies } from "./components/Netflix/ComedyMovies";
 import { Series } from "./components/Netflix/Series";
 import { SeriesDetail } from "./components/Netflix/SeriesDetail";
 import { ErrorPage } from "./components/Netflix/ErrorPage";
+import { ApiDemo1 } from "./components/apis/ApiDemo1";
+import { ApiDemo2 } from "./components/apis/ApiDemo2";
+import { ApiDemo3 } from "./components/apis/ApiDemo3";
 
 function App() {
   var title = "INDIA";
@@ -55,6 +58,9 @@ function App() {
         <Route path ="/series" element = {<Series/>}></Route>
         {/* <Route path= "/series/detail/:id" element ={<SeriesDetail/>}></Route> */}
         <Route path = "/series/detail/:id/:name" element ={<SeriesDetail/>}></Route>
+        <Route path ="/apidemo1" element={<ApiDemo1/>}></Route>
+        <Route path ="/apidemo2" element={<ApiDemo2/>}></Route>
+        <Route path ="/apidemo3" element={<ApiDemo3/>}></Route>
         {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<ErrorPage/>}></Route>
       </Routes>

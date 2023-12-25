@@ -139,3 +139,39 @@ REACT ROUTER DOM ---> v. 6
   <Route></Route>
   </Routes>
   </BrowserRouter>
+
+
+
+API : -> Application programming interface --> 
+froneENd --> db -->
+
+
+JAVA -->React --> method --> list ==>
+
+react --> java object *
+------------------------->
+files --> read -->DataBase --> 
+URL --> data store -->  
+http:mylocation..... --> data -->
+
+REST API CREATE -->  urls --> 
+
+form --> get post 
+
+url -->expose -> 
+API METHODS request methods
+
+GET --> fetch
+POST --> create
+PUT  --> update
+DELETE --> delete
+PATCH --> update --> partial update
+
+------------------------------------------
+dummy apis --->
+
+AXIOS  --> library -->
+
+
+
+
