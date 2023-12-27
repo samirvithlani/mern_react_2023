@@ -19,6 +19,8 @@ import { ErrorPage } from "./components/Netflix/ErrorPage";
 import { ApiDemo1 } from "./components/apis/ApiDemo1";
 import { ApiDemo2 } from "./components/apis/ApiDemo2";
 import { ApiDemo3 } from "./components/apis/ApiDemo3";
+import { ApiDemo4 } from "./components/apis/ApiDemo4";
+import { ApiDemo5 } from "./components/apis/ApiDemo5";
 
 function App() {
   var title = "INDIA";
@@ -61,6 +63,8 @@ function App() {
         <Route path ="/apidemo1" element={<ApiDemo1/>}></Route>
         <Route path ="/apidemo2" element={<ApiDemo2/>}></Route>
         <Route path ="/apidemo3" element={<ApiDemo3/>}></Route>
+        <Route path ="/apidemo4" element={<ApiDemo4/>}></Route>
+        <Route path ="/apidemo5" element={<ApiDemo5/>}></Route>
         {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<ErrorPage/>}></Route>
       </Routes>
