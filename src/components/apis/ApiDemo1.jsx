@@ -1,5 +1,6 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const ApiDemo1 = () => {
   const [users, setusers] = useState([]);
@@ -24,6 +25,13 @@ export const ApiDemo1 = () => {
     }
   }
 
+  useEffect(() => {
+    
+    fetchUserData();
+    
+  }, [])
+  
+
   // const fetchUserData = async () => {
   //   axios
   //     .get("https://node5.onrender.com/user/user")
@@ -40,13 +48,13 @@ export const ApiDemo1 = () => {
   return (
     <div>
       <h1>GET API DEMO 1</h1>
-      <button
+      {/* <button
         onClick={() => {
           fetchUserData();
         }}
       >
         Fetch User Data
-      </button>
+      </button> */}
       {isLoading && <h1>Loading...</h1>}
 
       <table className="table table-bordered">
@@ -70,7 +78,10 @@ export const ApiDemo1 = () => {
                 <td>{u.age}</td>
                 <td>{u.isActive == true ? "Active" : "NotActive"}</td>
                 <td>
-                  <button className="btn btn-danger" onClick={()=>{deleteUser(u._id)}}>Delete</button>
+                  <button className="btn btn-danger" onClick={()=>{deleteUser(u._id)}}>Delete</button> &nbsp;
+                  <Link to = {`/userupdate/${u._id}`} className="btn btn-warning">Update</Link> &nbsp;
+                  
+                  <Link to = {`/userdetail/${u._id}`} className="btn btn-success">View</Link>
                 </td>
               </tr>
             );

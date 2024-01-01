@@ -21,6 +21,9 @@ import { ApiDemo2 } from "./components/apis/ApiDemo2";
 import { ApiDemo3 } from "./components/apis/ApiDemo3";
 import { ApiDemo4 } from "./components/apis/ApiDemo4";
 import { ApiDemo5 } from "./components/apis/ApiDemo5";
+import { HookDemo } from "./components/HookDemo";
+import { UserDetail } from "./components/apis/UserDetail";
+import { UpdateUser } from "./components/apis/UpdateUser";
 
 function App() {
   var title = "INDIA";
@@ -60,12 +63,16 @@ function App() {
         <Route path ="/series" element = {<Series/>}></Route>
         {/* <Route path= "/series/detail/:id" element ={<SeriesDetail/>}></Route> */}
         <Route path = "/series/detail/:id/:name" element ={<SeriesDetail/>}></Route>
+        <Route path="/hookdemo" element={<HookDemo/>}></Route>
+
         <Route path ="/apidemo1" element={<ApiDemo1/>}></Route>
         <Route path ="/apidemo2" element={<ApiDemo2/>}></Route>
         <Route path ="/apidemo3" element={<ApiDemo3/>}></Route>
         <Route path ="/apidemo4" element={<ApiDemo4/>}></Route>
         <Route path ="/apidemo5" element={<ApiDemo5/>}></Route>
-        {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
+        <Route path = "/userdetail/:id" element = {<UserDetail/>}></Route>
+        <Route path = "/userupdate/:id" element = {<UpdateUser/>}></Route>
+         {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
         <Route path = "*" element = {<ErrorPage/>}></Route>
       </Routes>
       
