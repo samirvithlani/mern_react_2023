@@ -24,8 +24,12 @@ import { ApiDemo5 } from "./components/apis/ApiDemo5";
 import { HookDemo } from "./components/HookDemo";
 import { UserDetail } from "./components/apis/UserDetail";
 import { UpdateUser } from "./components/apis/UpdateUser";
+import { Students } from "./components/students/Students";
+import { AppContext } from "./context";
 
 function App() {
+  var company = "KGF";
+
   var title = "INDIA";
   var indepndence = "15th August 1947";
   var freedomFighters = {
@@ -53,29 +57,36 @@ function App() {
       {/* <RegisterEmployee/> */}
 
       <Navbar />
+      <AppContext.Provider value={{ company }}>
+        <Routes>
+          <Route path="/" element={<NetflixHome />}></Route>
+          <Route path="/netflixhome" element={<NetflixHome />}></Route>
+          <Route path="/netflixmovies" element={<NetflixMovis />}></Route>
+          <Route path="/thrillermovies" element={<ThrillerMovies />}></Route>
+          <Route
+            path="/netflixmovies/comedy"
+            element={<ComedyMovies />}
+          ></Route>
+          <Route path="/series" element={<Series />}></Route>
+          {/* <Route path= "/series/detail/:id" element ={<SeriesDetail/>}></Route> */}
+          <Route
+            path="/series/detail/:id/:name"
+            element={<SeriesDetail />}
+          ></Route>
+          <Route path="/hookdemo" element={<HookDemo />}></Route>
 
-      <Routes>
-        <Route path ="/" element ={<NetflixHome/>}></Route>
-        <Route path="/netflixhome" element={<NetflixHome />}></Route>
-        <Route path="/netflixmovies" element={<NetflixMovis/>}></Route>
-        <Route path="/thrillermovies" element ={<ThrillerMovies/>}></Route>
-        <Route path ="/netflixmovies/comedy" element ={<ComedyMovies/>}></Route>
-        <Route path ="/series" element = {<Series/>}></Route>
-        {/* <Route path= "/series/detail/:id" element ={<SeriesDetail/>}></Route> */}
-        <Route path = "/series/detail/:id/:name" element ={<SeriesDetail/>}></Route>
-        <Route path="/hookdemo" element={<HookDemo/>}></Route>
-
-        <Route path ="/apidemo1" element={<ApiDemo1/>}></Route>
-        <Route path ="/apidemo2" element={<ApiDemo2/>}></Route>
-        <Route path ="/apidemo3" element={<ApiDemo3/>}></Route>
-        <Route path ="/apidemo4" element={<ApiDemo4/>}></Route>
-        <Route path ="/apidemo5" element={<ApiDemo5/>}></Route>
-        <Route path = "/userdetail/:id" element = {<UserDetail/>}></Route>
-        <Route path = "/userupdate/:id" element = {<UpdateUser/>}></Route>
-         {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
-        <Route path = "*" element = {<ErrorPage/>}></Route>
-      </Routes>
-      
+          <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
+          <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
+          <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+          <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
+          <Route path="/apidemo5" element={<ApiDemo5 />}></Route>
+          <Route path="/userdetail/:id" element={<UserDetail />}></Route>
+          <Route path="/userupdate/:id" element={<UpdateUser />}></Route>
+          <Route path="/students" element={<Students />}></Route>
+          {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
+          <Route path="*" element={<ErrorPage />}></Route>
+        </Routes>
+      </AppContext.Provider>
     </div>
   );
 }

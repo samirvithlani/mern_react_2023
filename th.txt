@@ -174,4 +174,13 @@ AXIOS  --> library -->
 
 
 
+PROPS : - parent ->child compoant
+limitation --> props drilling
+
+props
+context api useContex
+redux --> store --> state management
+
+
+
 
