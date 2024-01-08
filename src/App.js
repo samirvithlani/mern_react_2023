@@ -26,6 +26,7 @@ import { UserDetail } from "./components/apis/UserDetail";
 import { UpdateUser } from "./components/apis/UpdateUser";
 import { Students } from "./components/students/Students";
 import { AppContext } from "./context";
+import { PopUpDemo } from "./components/PopUpDemo";
 
 function App() {
   var company = "KGF";
@@ -83,6 +84,7 @@ function App() {
           <Route path="/userdetail/:id" element={<UserDetail />}></Route>
           <Route path="/userupdate/:id" element={<UpdateUser />}></Route>
           <Route path="/students" element={<Students />}></Route>
+          <Route path="/popup" element = {<PopUpDemo/>}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>

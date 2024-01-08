@@ -77,6 +77,11 @@ export const Navbar = () => {
               students
             </Link>
           </li>
+          <li class="nav-item">
+            <Link class="nav-link" to="/popup">
+              popup demo
+            </Link>
+          </li>
           
         </ul>
       </div>
