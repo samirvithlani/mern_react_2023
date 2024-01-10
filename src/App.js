@@ -27,6 +27,8 @@ import { UpdateUser } from "./components/apis/UpdateUser";
 import { Students } from "./components/students/Students";
 import { AppContext } from "./context";
 import { PopUpDemo } from "./components/PopUpDemo";
+import { LoginUser } from "./components/LoginUser";
+import ProtectedRoute from "./hooks/ProtectedRoute";
 
 function App() {
   var company = "KGF";
@@ -76,15 +78,20 @@ function App() {
           ></Route>
           <Route path="/hookdemo" element={<HookDemo />}></Route>
 
+        <Route element={<ProtectedRoute/>}>
           <Route path="/apidemo1" element={<ApiDemo1 />}></Route>
           <Route path="/apidemo2" element={<ApiDemo2 />}></Route>
           <Route path="/apidemo3" element={<ApiDemo3 />}></Route>
+        </Route>
+
+
           <Route path="/apidemo4" element={<ApiDemo4 />}></Route>
           <Route path="/apidemo5" element={<ApiDemo5 />}></Route>
           <Route path="/userdetail/:id" element={<UserDetail />}></Route>
           <Route path="/userupdate/:id" element={<UpdateUser />}></Route>
           <Route path="/students" element={<Students />}></Route>
           <Route path="/popup" element = {<PopUpDemo/>}></Route>
+          <Route path = "/login" element = {<LoginUser/>}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>

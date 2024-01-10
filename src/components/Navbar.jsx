@@ -1,9 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+  const [id, setid] = useState("")
+  useEffect(() => {
+    
+    const localId = localStorage.getItem("id")
+    setid(localId)
+    
+    
+  }, [])
+
+  const naviagte = useNavigate()
+  const logout= ()=>{
+    localStorage.removeItem("id")
+    sessionStorage.removeItem("id")
+
+    // localStorage.clear()
+    // sessionStorage.clear()
+    
+    naviagte("/login")
+
+  }
+  
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      {id} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a class="navbar-brand" href="#">
         Navbar
       </a>
@@ -81,6 +103,15 @@ export const Navbar = () => {
             <Link class="nav-link" to="/popup">
               popup demo
             </Link>
+          </li>
+          <li class="nav-item">
+            <Link class="nav-link" to="/login">
+              login
+            </Link>
+          </li>
+          <li class="nav-item">
+            
+            <button className="nav-link" onClick={()=>{logout()}}>logout</button>
           </li>
           
         </ul>
