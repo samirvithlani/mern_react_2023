@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
+
+
+  const state = useSelector((state)=>state.cart.cart)
+  console.log("state...",state)
+
   const [id, setid] = useState("")
   useEffect(() => {
     
@@ -105,10 +111,21 @@ export const Navbar = () => {
             </Link>
           </li>
           <li class="nav-item">
+            <Link class="nav-link" to="/product">
+              PRODUCT
+            </Link>
+          </li>
+          <h1>
+          {
+             state.length
+          }
+          </h1>
+          <li class="nav-item">
             <Link class="nav-link" to="/login">
               login
             </Link>
           </li>
+          
           <li class="nav-item">
             
             <button className="nav-link" onClick={()=>{logout()}}>logout</button>

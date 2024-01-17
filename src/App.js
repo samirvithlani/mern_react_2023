@@ -29,6 +29,7 @@ import { AppContext } from "./context";
 import { PopUpDemo } from "./components/PopUpDemo";
 import { LoginUser } from "./components/LoginUser";
 import ProtectedRoute from "./hooks/ProtectedRoute";
+import { ProductComponent } from "./components/ProductComponent";
 
 function App() {
   var company = "KGF";
@@ -92,6 +93,7 @@ function App() {
           <Route path="/students" element={<Students />}></Route>
           <Route path="/popup" element = {<PopUpDemo/>}></Route>
           <Route path = "/login" element = {<LoginUser/>}></Route>
+          <Route path="/product" element = {<ProductComponent/>}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
