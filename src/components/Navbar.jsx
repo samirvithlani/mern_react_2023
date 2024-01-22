@@ -6,7 +6,9 @@ export const Navbar = () => {
 
 
   const state = useSelector((state)=>state.cart.cart)
+  const bankState = useSelector((state)=>state.bank)
   console.log("state...",state)
+  console.log("bankState...",bankState)
 
   const [id, setid] = useState("")
   useEffect(() => {
@@ -75,7 +77,7 @@ export const Navbar = () => {
               hook demo
             </Link>
           </li>
-          <li class="nav-item">
+          {/* <li class="nav-item">
             <Link class="nav-link" to="/apidemo1">
               apidemo1
             </Link>
@@ -99,7 +101,7 @@ export const Navbar = () => {
             <Link class="nav-link" to="/apidemo5">
               apidemo5
             </Link>
-          </li>
+          </li> */}
           <li class="nav-item">
             <Link class="nav-link" to="/students">
               students
@@ -111,8 +113,20 @@ export const Navbar = () => {
             </Link>
           </li>
           <li class="nav-item">
+            <Link class="nav-link" to="/withdraw">
+              withdraw
+            </Link>
+            
+          </li>
+          BALANCE : {bankState}
+          <li class="nav-item">
             <Link class="nav-link" to="/product">
               PRODUCT
+            </Link>
+          </li>
+          <li class="nav-item">
+            <Link class="nav-link" to="/cart">
+              CART
             </Link>
           </li>
           <h1>

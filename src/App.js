@@ -30,6 +30,8 @@ import { PopUpDemo } from "./components/PopUpDemo";
 import { LoginUser } from "./components/LoginUser";
 import ProtectedRoute from "./hooks/ProtectedRoute";
 import { ProductComponent } from "./components/ProductComponent";
+import { CartComponent } from "./components/CartComponent";
+import { WithdrawComponent } from "./components/WithdrawComponent";
 
 function App() {
   var company = "KGF";
@@ -94,6 +96,8 @@ function App() {
           <Route path="/popup" element = {<PopUpDemo/>}></Route>
           <Route path = "/login" element = {<LoginUser/>}></Route>
           <Route path="/product" element = {<ProductComponent/>}></Route>
+          <Route path = "/cart" element = {<CartComponent/>}></Route>
+          <Route path="/withdraw" element ={<WithdrawComponent/>}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
