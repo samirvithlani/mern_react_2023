@@ -13,8 +13,9 @@ const initialState = {
 export const fetchContent =createAsyncThunk(
     'content/fetchContent',
     async()=>{
+        //https://jsonplaceholder.typicode.com/posts
         const res = await axios.get('https://node5.onrender.com/user/user')
-        const data = await res.data.data
+        const data = await res.data
         return data
     }
 )
