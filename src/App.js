@@ -32,6 +32,7 @@ import ProtectedRoute from "./hooks/ProtectedRoute";
 import { ProductComponent } from "./components/ProductComponent";
 import { CartComponent } from "./components/CartComponent";
 import { WithdrawComponent } from "./components/WithdrawComponent";
+import { ContentComponent } from "./components/ContentComponent";
 
 function App() {
   var company = "KGF";
@@ -98,6 +99,7 @@ function App() {
           <Route path="/product" element = {<ProductComponent/>}></Route>
           <Route path = "/cart" element = {<CartComponent/>}></Route>
           <Route path="/withdraw" element ={<WithdrawComponent/>}></Route>
+          <Route path = "/content" element = {<ContentComponent/>}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
