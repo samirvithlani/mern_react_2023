@@ -9,16 +9,18 @@ export const ContentComponent = () => {
     const isLoading = useSelector((state)=>state.content.isLoading)
     const isError = useSelector((state)=>state.content.isError)
 
-    console.log("content...",content)
-    console.log("isLoading...",isLoading)
-    console.log("isError...",isError)
     // const state = useSelector((state)=>state.content)
     // console.log("state...",state.content)
     // console.log("isLoading...",state.isLoading)
     // console.log("isError...",state.isError)
+        console.log("content...",content)
+        console.log("isLoading...",isLoading)
+        console.log("isError...",isError)
+    
     useEffect(() => {
       
         dispatch(fetchContent())
+        
       
     }, [])
     

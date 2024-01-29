@@ -102,7 +102,7 @@ export const Navbar = () => {
               apidemo5
             </Link>
           </li> */}
-          <li class="nav-item">
+          {/* <li class="nav-item">
             <Link class="nav-link" to="/students">
               students
             </Link>
@@ -116,7 +116,12 @@ export const Navbar = () => {
             <Link class="nav-link" to="/content">
               content
             </Link>
-            
+          </li> */}
+          
+          <li class="nav-item">
+            <Link class="nav-link" to="/userquery">
+            userquery
+            </Link>
           </li>
           <li class="nav-item">
             <Link class="nav-link" to="/withdraw">

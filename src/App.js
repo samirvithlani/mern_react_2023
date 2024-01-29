@@ -33,10 +33,17 @@ import { ProductComponent } from "./components/ProductComponent";
 import { CartComponent } from "./components/CartComponent";
 import { WithdrawComponent } from "./components/WithdrawComponent";
 import { ContentComponent } from "./components/ContentComponent";
+import { UserQuery } from "./components/query/UserQuery";
+import axios from "axios";
 
 function App() {
-  var company = "KGF";
 
+  //axios default path
+  //axios.defaults.baseURL = "http://localhost:3001";
+  axios.defaults.baseURL = "https://node5.onrender.com";
+  
+
+  var company = "KGF";
   var title = "INDIA";
   var indepndence = "15th August 1947";
   var freedomFighters = {
@@ -100,6 +107,7 @@ function App() {
           <Route path = "/cart" element = {<CartComponent/>}></Route>
           <Route path="/withdraw" element ={<WithdrawComponent/>}></Route>
           <Route path = "/content" element = {<ContentComponent/>}></Route>
+          <Route path ="/userquery" element= {<UserQuery/>}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
