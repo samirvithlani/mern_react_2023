@@ -123,6 +123,12 @@ export const Navbar = () => {
             userquery
             </Link>
           </li>
+          
+          <li class="nav-item">
+            <Link class="nav-link" to="/usemutate">
+            usemutate
+            </Link>
+          </li>
           <li class="nav-item">
             <Link class="nav-link" to="/withdraw">
               withdraw

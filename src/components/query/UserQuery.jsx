@@ -1,5 +1,5 @@
 import React from "react";
-import useFetchUserData from "./userService";
+import {useFetchUserData} from "./userService";
 
 export const UserQuery = () => {
   const { isLoading, isError, data ,refetch} = useFetchUserData();

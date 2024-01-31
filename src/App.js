@@ -35,6 +35,7 @@ import { WithdrawComponent } from "./components/WithdrawComponent";
 import { ContentComponent } from "./components/ContentComponent";
 import { UserQuery } from "./components/query/UserQuery";
 import axios from "axios";
+import { AddUserQuery } from "./components/query/AddUserQuery";
 
 function App() {
 
@@ -108,6 +109,7 @@ function App() {
           <Route path="/withdraw" element ={<WithdrawComponent/>}></Route>
           <Route path = "/content" element = {<ContentComponent/>}></Route>
           <Route path ="/userquery" element= {<UserQuery/>}></Route>
+          <Route path = "/usemutate" element = {<AddUserQuery/>}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
