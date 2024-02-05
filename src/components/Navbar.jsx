@@ -1,6 +1,8 @@
+import { Switch } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { changeTheme } from "../redux/ThemeSlice";
 
 export const Navbar = () => {
 
@@ -9,6 +11,17 @@ export const Navbar = () => {
   const bankState = useSelector((state)=>state.bank)
   console.log("state...",state)
   console.log("bankState...",bankState)
+
+  const dispatch = useDispatch()
+
+  const handleSwitch = (e)=>{
+    console.log("e...",e.target.checked)
+    setchecked(e.target.checked)
+    dispatch(changeTheme(e.target.checked))
+    
+  }
+
+  const [checked, setchecked] = useState(true)
 
   const [id, setid] = useState("")
   useEffect(() => {
@@ -161,6 +174,14 @@ export const Navbar = () => {
             
             <button className="nav-link" onClick={()=>{logout()}}>logout</button>
           </li>
+
+          <Switch
+          checked = {checked}
+          onChange = {handleSwitch}
+          inputProps={{ 'aria-label': 'controlled' }}
+          >
+
+          </Switch>
           
         </ul>
       </div>

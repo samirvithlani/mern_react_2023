@@ -1,9 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 export const NetflixMovis = () => {
+  const state = useSelector((state) => state);
+  const myTheme = {
+    backgroundColor: state.theme.theme == "dark" ? "black" : "white",
+  }
   return (
-    <div>
+
+    <div style={myTheme}>
         <h1>MOVIES</h1>
         <ul>
           <li>
