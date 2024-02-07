@@ -37,6 +37,8 @@ import { UserQuery } from "./components/query/UserQuery";
 import axios from "axios";
 import { AddUserQuery } from "./components/query/AddUserQuery";
 import { ButtonDemo1 } from "./components/mui/ButtonDemo1";
+import { MuiTableDemo1 } from "./components/mui/MuiTableDemo1";
+import { MuiTable2 } from "./components/mui/MuiTable2";
 
 function App() {
 
@@ -112,6 +114,7 @@ function App() {
           <Route path ="/userquery" element= {<UserQuery/>}></Route>
           <Route path = "/usemutate" element = {<AddUserQuery/>}></Route>
           <Route path = "/muiButton" element ={<ButtonDemo1/>}></Route>
+          <Route path = "/muitable" element ={<MuiTable2 />}></Route>
           {/* <Route path = "*" element = {<h1>404</h1>}></Route> */}
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
